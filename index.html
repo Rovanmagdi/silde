@@ -1,93 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css" >
+    <title>Responsive Sidebar Dashboard Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
-<link rel="stylesheet" href="style.css">
-<script >
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+      <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+      </label>
+      <div class="left_area">
+        <h3>Name</h3>
+      </div>
+      <div class="right_area">
+        <a href="#" class="logout_btn">
+            <img src="pietra-schwarzler-FqdfVIdgR98-unsplash.jpg" class="logout_btn" alt="">
+
+        </a>
+        <a href="#" class="logout_btn_bell"></ahref>
+            <i class="fa fa-bell "></i>
+            <div class="notification">3</div>
+        </a>
+      </div>
+    </header>
+   
+    <div class="mobile_nav">
+      <div class="nav_bar">
+         
+        <img src="pietra-schwarzler-FqdfVIdgR98-unsplash.jpg" class="mobile_profile_image" alt="">
+        
+     
+        <i class="fa fa-bars nav_btn"></i>
+      </div>
+      <div class="mobile_nav_items">
+       
+        <a href="#"><i class="fas fa-user"></i><span>Profile</span></a>
+        <a href="#"><i class="fas fa-users"></i><span>Teams</span></a>
+        <a href="#"><i class="fas fa-calendar-week"></i><span>Calender</span></a>
+        <a href="#"><i class="fas fa-envelope"></i><span>Massage</span></a>
+
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+  
+        <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+        <p class="logout">
+        <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i><span>LogOut</span></a>
+      </p>
+
+    </div>
+    </div>
+   
+    <div class="sidebar">
+      <div class="profile_info">
+         <div class="img"> 
+        <img src="pietra-schwarzler-FqdfVIdgR98-unsplash.jpg" class="profile_image" alt="">
+      <div class="text">
+          <p>
+        <i class="fa fa-camera-retro"></i>
+        change picture
+          </p>
+      </div>
+        <h4>Jessica</h4>
+      </div>
+    </div>
+      <a href="#"><i class="fas fa-user"></i><span>Profile</span></a>
+      <a href="#"><i class="fas fa-users"></i><span>Teams</span></a>
+     
+      <a href="#"><i class="fas fa-calendar-week"></i><span>Calender</span></a>
+      <a href="#"><i class="fas fa-envelope"></i><span>Massage</span></a>
+
+      <a href="#"><i class="fas fa-sliders-h"></i><span>Settings</span></a>
+
+      <a href="#"><i class="fas fa-info-circle"></i><span>About</span></a>
+      <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i><span>LogOut</span></a>
+    </div>
+ 
+
+    <div class="content">
+      
+    </div>
+
+    <script type="text/javascript">
     $(document).ready(function(){
-    $(".silder-btn").click(function(){
-        $(".wrapper").toggleClass("collapsed");
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
     });
-});
     </script>
-</head>
-<body>
-    <div class="wrapper">
-        <div class="header">
-            <div class="header-menu">
-                <div class="title">coding<span >Snow</span> </div>
-           <div class="silder-btn">
-            <i class="fa fa-bars"></i>
-           </div>
-           <ul>
-               <li> <a href="#"><i class="fa fa-search"></i></a></li>
-               <li> <a href="#"><i class="fa fa-bell"></i></a></li>
-               <li> <a href="#"><i class="fa fa-power-off"></i></a></li>
-           </ul>
-            </div>
-        </div>
-        <div class="silder">
-            <div class="silder-menu">
-                <center class="profile">
-                    <img src="pietra-schwarzler-FqdfVIdgR98-unsplash.jpg" width="200px" height="200px">
-                    <p>Name</p>
 
-                </center>
-                <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="fa fa-desktop"></i><span>Dashboard</span>
-
-                    </a>
-                </li>
-                <li class="item" id="profile">
-                    <a href="#profile" class="menu-btn">
-                        <i class="fa fa-user-circle"></i><span>profile <i class="fa fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"> <i class="fa fa-image"></i> <span>picture</span></a>
-                        <a href="#"> <i class="fa fa-address-card"></i> <span>info</span></a>
-                    </div>
-                </li>
-                
-                <li class="item" id="massage">
-                    <a href="#massage" class="menu-btn">
-                        <i class="fa fa-envelope"></i><span>message <i class="fa fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"> <i class="fa fa-envelope"></i> <span>New</span></a>
-                        <a href="#"> <i class="fa fa-envelope-square"></i> <span>Sent</span></a>
-                        <a href="#"> <i class="fa fa-exclamation-circle"></i> <span>span</span></a>
-
-                    </div>
-                </li>
-                <li class="item" id="setting">
-                    <a href="#setting" class="menu-btn">
-                        <i class="fa fa-cog"></i><span>settings <i class="fa fa-chevron-down drop-down"></i></span>
-                    </a>
-                    <div class="sub-menu">
-                        <a href="#"> <i class="fa fa-lock"></i> <span>Password</span></a>
-                        <a href="#"> <i class="fa fa-language"></i> <span>Language</span></a>
-                    </div>
-                </li>
-                
-                <li class="item">
-                    <a href="#" class="menu-btn">
-                        <i class="fa fa-info-circle"></i><span>About</span>
-
-                    </a>
-                </li>
-            </div>
-        </div>
-    </div>
-
-    <div class="main-container">
-
-    </div>
-   
-   
-</body>
+  </body>
 </html>
+      
